@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+<script type="text/javascript">
+    function upDate(i){
+        document.getElementById('image').style.backgroundImage="url('"+i.src+"')";
+        document.getElementById('image').innerHTML= i.alt;
+    }
+
+    function unDo(i){
+        document.getElementById('image').style.backgroundImage="url()";
+        document.getElementById('image').innerHTML= "Hover over an image below."
+    }
+</script>
+</head>
+
+<body>
+    <h1>Challenge 4</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" 
+            alt = "Deadmau5" 
+            src = "https://upload.wikimedia.org/wikipedia/commons/6/61/Deadmau5_d.jpg"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" 
+            alt = "Sickick" 
+            src = "https://i.ytimg.com/vi/OxVDWQIFvis/maxresdefault.jpg"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "https://lastfm-img2.akamaized.net/i/u/770x0/3f632084024e5540bbe717fd4692ca28.jpg" 
+            alt = "Marshmello"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "https://media.npr.org/assets/music/blogs/asc/2010/11/daftpunktron_wide-491ccf2b848a9b17292d46a17c9a922e2043dae5.jpg?s=1400" 
+            alt = "Daft Punk"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+        
+            <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+        src = "https://i.ytimg.com/vi/I9533sD5-kw/maxresdefault.jpg" 
+        alt = "Black Tiger Sex Machine"
+        onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+        
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1" 
+            src = "https://media.gettyimages.com/photos/malaa-performs-onstage-during-the-hard-summer-festival-at-auto-club-picture-id584825496?s=612x612" 
+            alt = "Malaa"
+            onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+</body>
+</html>
+    
