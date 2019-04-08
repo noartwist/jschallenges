@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Challenge 4</title>
+  <title>Challenge 3</title>
     <style>
 
-    .errormsg { 
+    .errorMsg { 
         /*font: Use a cool Google font*/
       color:red;
       display:none; } 
@@ -13,20 +13,33 @@
     
     <script>
     function checkForm(){
+
       var check = document.getElementById("name");
+      var check2 = document.getElementById("addr");
+      var validName = true;
+      var validAddr = true;
 
       if (check.value == ""){
-        window.alert("Please enter your name above!");
-        return false;
+        validName = false;
       }
 
-      check = document.getElementById("addr")
-      if (check.value == ""){
-        window.alert("Please enter your street address!");
-        return false;
+      if (check2.value == ""){
+        validAddr = false;
       }
 
-      return true;
+      if( (validName == false) || (validAddr == false) ){
+        if(!validName){
+          window.alert("Please enter your name above!");
+        }
+        if(!validAddr){
+          window.alert("Please enter your street address!");
+        }
+        return false;
+      }
+      else{ 
+        return true;
+      }
+
 
     }  
     </script>
